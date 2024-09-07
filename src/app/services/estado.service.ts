@@ -9,8 +9,6 @@ import { Estado } from "../model/estado";
 })
 export class EstadoService {
 
-  private apiUrl = `${API_CONFIG.baseUrl}/estados`; // Usa a URL da configuração
-
   constructor(private http: HttpClient) { }
 
   getEstados(): Observable<Estado[]> {

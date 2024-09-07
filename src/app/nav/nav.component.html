@@ -6,15 +6,29 @@
 
     <div class="navbar-list">
       <div>
-        <a routerLink="/home">
+        <a routerLink="home">
           <i class="material-icons">home</i>
           Home
         </a>
       </div>
       <div>
-        <a routerLink="/estados">
-          <i class="material-icons">public</i> <!-- Ícone adicionado -->
+        <a routerLink="estados">
+          <i class="material-icons">public</i>
           Estados
+        </a>
+      </div>
+
+      <div>
+        <a routerLink="cidades">
+          <i class="material-icons">location_city</i>
+          Cidades
+        </a>
+      </div>
+
+      <div>
+        <a routerLink="app">
+          <i class="material-icons">extension</i>
+          APP
         </a>
       </div>
       <div>
@@ -33,4 +47,5 @@
     </button>
     <router-outlet></router-outlet>
   </div>
+
 </mat-drawer-container>

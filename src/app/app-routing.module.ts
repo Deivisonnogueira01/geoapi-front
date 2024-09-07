@@ -5,6 +5,8 @@ import { NavComponent } from './nav/nav.component';
 import { AuthGuard } from './auth/auth.guard';
 import { HomeComponent } from './home/home.component';
 import { EstadoListaComponent } from './estado-lista/estado-lista.component';
+import { CidadesComponent } from './cidades/cidades.component';
+import { AppComponent } from './app.component';
 
 const routes: Routes = [
     {path: "login", component: LoginComponent},
@@ -12,7 +14,10 @@ const routes: Routes = [
 {
     path: '', component: NavComponent, canActivate: [AuthGuard], children: [
       { path: "home", component: HomeComponent },
-      { path: 'estados', component: EstadoListaComponent }
+      { path: 'estados', component: EstadoListaComponent },
+      { path: 'cidades', component: CidadesComponent },
+      { path: 'app', component: AppComponent }
+
 
     ]
   }

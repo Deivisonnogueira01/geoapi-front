@@ -15,7 +15,6 @@ export class EstadoListaComponent implements OnInit {
   constructor(private estadoService: EstadoService) { }
 
   ngOnInit(): void {
-    //this.carregarEstados();
   }
 
   carregarEstados(): void {
