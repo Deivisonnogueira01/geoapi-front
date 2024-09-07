@@ -1,9 +1,9 @@
-;
+
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Credenciais } from '../model/credenciais';
+import { AuthRequest} from '../model/authRequest';
 import { JwtHelperService } from '@auth0/angular-jwt';
-import { API_CONFIG } from '../components/config/api.config';
+import { API_CONFIG } from '../config/api.config';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +15,8 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  authenticate(creds: Credenciais) {
-    return this.http.post(`${API_CONFIG.baseUrl}/login`, creds, {
+  authenticate(auth: AuthRequest) {
+    return this.http.post(`${API_CONFIG.baseUrl}/api/auth/login`, auth, {
       observe: 'response',
       responseType: 'text'
     })

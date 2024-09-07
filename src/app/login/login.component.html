@@ -1,1 +1,46 @@
-<p>login works!</p>
+<div class="container">
+
+  <form class="form mat-elevation-z8">
+
+     <h1>GEOBR API</h1>
+
+    <div class="div-img">
+       <img src="assets/img/user-login-5867.svg" alt="">
+
+    </div>
+    <div class="forms">
+       <mat-label>Username</mat-label>
+       <mat-form-field appearance="outline">
+          <input
+          [formControl]="username"
+          required
+          [(ngModel)]="auth.username"
+          name="username"
+          matInput
+          placeholder="User">
+          <mat-icon matSuffix>username</mat-icon>
+       </mat-form-field>
+
+       <mat-label>Password</mat-label>
+       <mat-form-field appearance="outline">
+          <input
+          [formControl]="password"
+          required
+          [(ngModel)]="auth.password"
+          name="password"
+          type="password"
+          matInput
+          placeholder="Ex. myPass">
+          <mat-icon matSuffix>password</mat-icon>
+       </mat-form-field>
+    </div>
+
+
+    <div class="div-button">
+       <button (click)="logar()" [disabled]="!validaCampos()"  mat-stroked-button color="primary"> Entrar</button>
+    </div>
+
+
+  </form>
+
+</div>

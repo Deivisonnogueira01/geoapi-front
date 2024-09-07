@@ -1,4 +1,4 @@
-export interface Credenciais {
+export interface AuthRequest {
 
    username: string;
    password: string;
