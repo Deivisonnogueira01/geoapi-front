@@ -16,7 +16,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   authenticate(auth: AuthRequest) {
-    return this.http.post(`${API_CONFIG.baseUrl}/api/auth/login`, auth, {
+    return this.http.post(`${API_CONFIG.baseUrl}/login`, auth, {
       observe: 'response',
       responseType: 'text'
     })
